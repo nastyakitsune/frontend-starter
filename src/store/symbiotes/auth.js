@@ -4,6 +4,7 @@ import { success, error, loading } from "../helpers";
 const initialState = {
   token: null,
   refreshToken: null,
+  isLoggedUser: false,
   error: null,
   loading: false
 };

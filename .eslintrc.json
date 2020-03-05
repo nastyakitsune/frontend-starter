@@ -39,11 +39,6 @@
         "ignore": [0, 1]
       }
     ],
-    "jsx-a11y/anchor-is-valid": [
-      1,
-      {
-        "aspects": ["invalidHref"]
-      }
-    ]
+    "jsx-a11y/anchor-is-valid": 0
   }
 }

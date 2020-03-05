@@ -17,7 +17,7 @@ function* login({ payload: { email, password } }) {
     );
   } catch ({ response }) {
     const error = getError(response);
-    yield put(auth.getDataError(error));
+    yield put(auth.loginError(error));
   }
 }
 

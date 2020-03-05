@@ -14,8 +14,9 @@ const authApi = axios.create({
 });
 
 api.interceptors.request.use(
-  async request => {
-    // getting token from local storage
+  request => {
+    // async request => {
+    // await getting token from local storage
     let token = "";
     if (token) {
       request.headers.Authorization = `Bearer ${token}`;

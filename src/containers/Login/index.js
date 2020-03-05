@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 export const Login = () => {
   const [logged, setLogged] = useState(false);
@@ -6,10 +7,13 @@ export const Login = () => {
   return (
     <div>
       <div>Hello there!</div>
-      {logged ? (
-        <div>You are logged!</div>
+      {!logged ? (
+        <button onClick={() => setLogged(!logged)}>Login</button>
       ) : (
-        <button onClick={setLogged(!logged)}>Login</button>
+        <>
+          <div>You are logged</div>
+          <Link to={`/dashboard`}>Go to Dashboard</Link>
+        </>
       )}
     </div>
   );

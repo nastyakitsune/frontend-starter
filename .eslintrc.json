@@ -40,6 +40,6 @@
       }
     ],
     "jsx-a11y/anchor-is-valid": 0,
-    "quotes": [2, "double", "avoid-escape"]
+    "quotes": [2, "double", "avoid-escape", "allowTemplateLiterals"]
   }
 }

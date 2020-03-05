@@ -1,14 +1,21 @@
-import React, { useState } from "react";
+import * as React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { auth as authActions } from "../../store/symbiotes/actions";
+import { auth as authSelectors } from "../../store/selectors";
 
 export const Login = () => {
-  const [logged, setLogged] = useState(false);
+  const isLogged = useSelector(authSelectors.isLoggedUser);
+
+  const dispatch = useDispatch();
+
+  const onLoginBtnClick = () => dispatch(authActions.login());
 
   return (
     <div>
       <div>Hello there!</div>
-      {!logged ? (
-        <button onClick={() => setLogged(!logged)}>Login</button>
+      {!isLogged ? (
+        <button onClick={onLoginBtnClick}>Login</button>
       ) : (
         <>
           <div>You are logged</div>
